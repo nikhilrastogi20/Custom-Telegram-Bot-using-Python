@@ -1,2 +1,2 @@
 # Custom-Telegram-Bot-using-Python
-Mini project for certificationfrom Digipodium
+Mini project for certification from Digipodium
