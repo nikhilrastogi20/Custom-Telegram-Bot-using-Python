@@ -13,6 +13,7 @@ def start(update: Update, context: CallbackContext):
   
 def help(update: Update, context: CallbackContext):
     update.message.reply_text("""Available Commands :-
+    /date_time - To get the time and date
     /youtube - To get the youtube URL
     /linkedin - To get the LinkedIn profile URL
     /gmail - To get gmail URL
@@ -23,7 +24,11 @@ def help(update: Update, context: CallbackContext):
     /google - To get google URL""")
   
   
-def gmail_url(update: Update, context: CallbackContext):
+  def date_time_url(update: Update, context: CallbackContext):
+    update.message.reply_text("https://www.timeanddate.com/worldclock/india/new-delhi")
+
+  
+  def gmail_url(update: Update, context: CallbackContext):
     update.message.reply_text(" Gmail Link =>  https://www.google.com/gmail/")
    
   
@@ -65,6 +70,7 @@ def unknown_text(update: Update, context: CallbackContext):
   
   
 updater.dispatcher.add_handler(CommandHandler('start', start))
+updater.dispatcher.add_handler(CommandHandler('date_time', date_time_url))
 updater.dispatcher.add_handler(CommandHandler('youtube', youtube_url))
 updater.dispatcher.add_handler(CommandHandler('help', help))
 updater.dispatcher.add_handler(CommandHandler('linkedin', linkedIn_url))
